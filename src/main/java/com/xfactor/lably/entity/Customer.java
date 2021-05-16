@@ -7,25 +7,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tbl_lab")
-public class Lab {
+@Table(name = "tbl_customer")
 
+public class Customer {
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private Long id;
+    private Long Id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "phone")
-    private String phone;
-
     @Column(name = "address")
     private String address;
 
-    @Column(name = "pincode")
-    private String pincode;
+    @Column(name = "age")
+    private String age;
+
+    @Column(name = "gender")
+    private String gender;
 
     public String getName() {
         return name;
@@ -33,14 +33,6 @@ public class Lab {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getAddress() {
@@ -51,20 +43,28 @@ public class Lab {
         this.address = address;
     }
 
-    public String getPincode() {
-        return pincode;
+    public String getAge() {
+        return age;
     }
 
-    public void setPincode(String pincode) {
-        this.pincode = pincode;
+    public void setAge(String age) {
+        this.age = age;
     }
 
-    public Long getId() {
-        return id;
+    public String getGender() {
+        return gender;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public long getId() {
+        return Id;
+    }
+
+    public void setId(long id) {
+        this.Id = id;
     }
 
 }
